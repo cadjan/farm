@@ -61,41 +61,98 @@ table {
     --white:#ffffff;
 }
 
-/* --------------------GLOBAL STYLES (mobile first/small) --------------------*/
+h1, h2, h3, h4 {
+    font-family: Irish grover;
+}
 h1 {
     font-size: 2.5em;
+    padding: 10px;
 }
 
+.intro {
+    font-style: italic;
+    padding: 10px;
+}
 h2 {
     font-size: 1.75em;
 }
 
+h3 {
+    text-align: center;
+}
 h3, text {
     font-size: 1.25em;
 }
 
+
 header, footer {
+    width: 100%;
     color: var(--white);
     background-color: var(--green);
+    
 }
 
-nav {
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: right;
+    align-items: flex-start;
+
+}
+
+
+nav ul li a {
+    display: flex;
+    margin-right: 10px;
+    padding: 10px 20px;
+    text-decoration: none;
     color: var(--white);
     background-color: var(--orange);
-}
-
-div {
-    display: flex;
-    flex-wrap: wrap;
+    border: 2px solid var(--white);
+    border-radius: 5px;
 }
 
 #top {
-    position: relative;
+    position: fixed;
     bottom: 0;
     right:5px;
     color: var(--white);
     background-color: var(--orange);
 }
+
+figure {
+    position: relative;
+    display: inline-block;
+}
+
+figcaption {
+    position: absolute;
+    top: 50px;
+    left: 50px;
+
+    text-align: center;
+    justify-content: center;
+    color: var(--white);
+}
+/* --------------------GLOBAL STYLES (mobile first/small) --------------------*/
+@media screen and(min-width: 428px){
+figure{
+    display: grid;
+    grid-template-columns: 1fr;
+}
+}
 /*-------------------- MEDIA QUERY (medium) --------------------------------*/
+@media screen and (min-width: 834px){
+ 
+}
 /*-------------------- MEDIA QUERY (large) ------------------------------------*/
+@media screen and (min-width: 1280px){
+
+}
 /*-------------------- MEDIA QUERY (xl) ---------------------------------------*/
+@media screen and (min-width: 1440px){
+
+}
