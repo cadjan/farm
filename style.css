@@ -57,7 +57,7 @@ table {
 }
 /*create font colors and sizes*/
 h1, h2, h3, h4 {
-    font-family: Irish grover;
+    font-family: "Irish grover";
 }
 h1 {
     font-size: 2.5em;
@@ -182,7 +182,6 @@ figcaption {
     }
 }
 .footer-container {
-    display: grid;
     grid-template-columns: (3, 1fr);
 }
 /* Extra Large Screens (4 Columns) */
