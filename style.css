@@ -55,7 +55,7 @@ table {
     --black: #000000;
     --white: #ffffff;
 }
-
+/*create font colors and sizes*/
 h1, h2, h3, h4 {
     font-family: Irish grover;
 }
@@ -90,8 +90,8 @@ header, footer {
 }
 
 nav ul {
-   display: flex;
-   justify-content: center;
+   display: flex; /*creates nav in row*/
+   justify-content: center; /*makes nav centered*/
    gap: 20px;
 
 }
@@ -100,14 +100,14 @@ nav ul li a {
     display: flex;
     text-decoration: none;
     color: var(--white);
-    background-color: #E75D02;
+    background-color: #E75D02;/*create button style for nav*/
     border: 2px solid var(--white);
     border-radius: 5px;
     padding: 10px 20px;
 }
 
 #top {
-    position: fixed;
+    position: fixed;/*create fixed nav button in bottom right of screen*/
     bottom: 0;
     right: 5px;
     z-index: 1000;
@@ -129,7 +129,7 @@ figure img {
 }
 
 figcaption {
-    position: absolute;
+    position: absolute; /*move on top of images*/
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%); /*center figcaption */
@@ -138,6 +138,12 @@ figcaption {
     padding: 10px 20px;
     text-align: center;
     font-size: 1rem;
+}
+
+.copy{
+    color: var(--green);
+    background-color: var(--white);
+    text-align: center;
 }
 
 /* -------------------- GLOBAL STYLES (mobile first/small) -------------------- */
@@ -152,6 +158,10 @@ figcaption {
     gap: 20px;
     padding: 10px;
 }
+.footer-container {
+    display: grid;
+    grid-template-columns: 1fr;
+}
 
 }
 
@@ -159,7 +169,10 @@ figcaption {
     .container {
         grid-template-columns: repeat(2, 1fr); /* makes 2 columns for figs */
     }
-
+    .footer-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 /* Large Screens (3 Columns) */
@@ -168,9 +181,16 @@ figcaption {
         grid-template-columns: repeat(3, 1fr); /*make 3 columns */
     }
 }
-
+.footer-container {
+    display: grid;
+    grid-template-columns: (3, 1fr);
+}
 /* Extra Large Screens (4 Columns) */
 @media screen and (min-width: 1440px) {
     .container{
         grid-template-columns: repeat(4, 1fr);} /*makes 4 columns */
+}
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
 }
