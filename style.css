@@ -70,11 +70,14 @@ h1 {
 }
 h2 {
     font-size: 1.75em;
-   
+    padding: 10px;
 }
-
+p {
+    padding: 10px;
+}
 h3 {
     text-align: center;
+    padding: 10px;
 }
 h3, text {
     font-size: 1.25em;
@@ -87,89 +90,87 @@ header, footer {
 }
 
 nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: right;
-    align-items: flex-start;
+   display: flex;
+   justify-content: center;
+   gap: 20px;
+
 }
 
 nav ul li a {
     display: flex;
-    margin-right: 10px;
-    padding: 10px 20px;
     text-decoration: none;
     color: var(--white);
-    background-color: var(--orange);
+    background-color: #E75D02;
     border: 2px solid var(--white);
     border-radius: 5px;
+    padding: 10px 20px;
 }
 
 #top {
     position: fixed;
     bottom: 0;
     right: 5px;
-    color: var(--white);
-    background-color: var(--orange);
 }
 
+/* fig and figcaption */
 
-/* Figure and Figcaption */
 figure {
     position: relative;
     display: inline-block;
-    overflow: hidden; /* Ensure figcaption stays within bounds */
+    overflow: hidden;
     margin: 10px;
 }
 
 figure img {
     display: block;
     width: 100%;
-    height: auto; /* Ensure images scale properly */
+    height: auto;
 }
 
 figcaption {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%); /* Center figcaption */
-    background-color: rgba(0, 0, 0, 0.7); /* black background with opacity */
+    transform: translate(-50%, -50%); /*center figcaption */
+    background-color: rgba(0,0, 0, 0.7 ); /* opacity for background */
     color: var(--white);
     padding: 10px 20px;
     text-align: center;
     font-size: 1rem;
 }
 
+/* -------------------- GLOBAL STYLES (mobile first/small) -------------------- */
 
 
-
-
-/* -------------------- GRID LAYOUT -------------------- */
+/* Medium Screens (2 Columns) */
+@media and (min-width:428px){
+    
 .container {
     display: grid;
-    grid-template-columns: 1fr; /* Default: single column */
-    gap: 20px; /* Space between grid items */
+    grid-template-columns: 1fr; /* single columns */
+    gap: 20px;
     padding: 10px;
 }
 
-/* Medium Screens (2 Columns) */
-@media screen and (min-width: 428px) and (max-width: 833px) {
+}
+
+@media  and (min-width: 834px) and (max-width: 1279px) {
     .container {
-        grid-template-columns: repeat(2, 1fr); /* Two columns */
+        grid-template-columns: repeat(2, 1fr); /* makes 2 columns for figs */
     }
+
 }
 
 /* Large Screens (3 Columns) */
-@media screen and (min-width: 834px) and (max-width: 1279px) {
-    .container {
-        grid-template-columns: repeat(3, 1fr); /* Three columns */
+@media and (min-width: 1280px) and (max-width: 1439px) {
+    .container{
+        grid-template-columns: repeat(3, 1fr); /*make 3 columns */
     }
 }
 
 /* Extra Large Screens (4 Columns) */
-@media screen and (min-width: 1280px) {
-    .container {
-        grid-template-columns: repeat(4, 1fr); /* Four columns */
+@media and (min-width: 1440px) {
+    .container{
+        grid-template-columns: repeat (4, 1fr); /*makes 4 columns */
     }
 }
