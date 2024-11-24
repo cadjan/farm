@@ -70,6 +70,7 @@ h1 {
 }
 h2 {
     font-size: 1.75em;
+   
 }
 
 h3 {
@@ -113,6 +114,7 @@ nav ul li a {
     background-color: var(--orange);
 }
 
+
 /* Figure and Figcaption */
 figure {
     position: relative;
@@ -132,13 +134,16 @@ figcaption {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%); /* Center figcaption */
-    background-color: rgba(0, 0, 0, 0.7); /* Translucent black background */
+    background-color: rgba(0, 0, 0, 0.7); /* black background with opacity */
     color: var(--white);
     padding: 10px 20px;
-    border-radius: 5px; /* Optional: rounded corners */
     text-align: center;
     font-size: 1rem;
 }
+
+
+
+
 
 /* -------------------- GRID LAYOUT -------------------- */
 .container {
